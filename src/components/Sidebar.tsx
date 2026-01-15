@@ -56,12 +56,12 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
       {/* Logo Section - Solo logo, sin texto */}
       <div className="p-6 border-b border-gray-100 flex justify-center">
         <motion.div
-          className={`relative flex-shrink-0 ${isCollapsed && !isMobile ? 'w-12 h-12' : 'w-40 h-14'}`}
+          className={`relative flex-shrink-0 ${isCollapsed && !isMobile ? 'w-10 h-10' : 'w-40 h-14'}`}
           whileHover={{ scale: 1.05 }}
           transition={{ type: 'spring', stiffness: 300 }}
         >
           <Image
-            src="/logos/syntalys-group/logo-horizontal.png"
+            src={isCollapsed && !isMobile ? '/images/icons/syntalys_group.png' : '/logos/syntalys-group/logo-horizontal.png'}
             alt="SYNTALYS GROUP"
             fill
             className="object-contain"
