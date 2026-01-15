@@ -36,11 +36,36 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-24 bg-white relative overflow-hidden">
-      {/* Background decorations */}
+    <section id="about" className="py-24 relative overflow-hidden">
+      {/* Background with elegant gradient */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-gray-50 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-1/3 h-full bg-gradient-to-r from-gray-50 to-transparent" />
+        {/* Diagonal gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-[#03366d]/3 to-[#D4AF37]/5" />
+
+        {/* Top accent bar */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#03366d]/20 to-transparent" />
+
+        {/* Floating shapes */}
+        <motion.div
+          animate={{
+            y: [0, -20, 0],
+            opacity: [0.1, 0.15, 0.1]
+          }}
+          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute top-40 right-10 w-72 h-72 bg-[#D4AF37]/20 rounded-full blur-3xl"
+        />
+        <motion.div
+          animate={{
+            y: [0, 20, 0],
+            opacity: [0.08, 0.12, 0.08]
+          }}
+          transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
+          className="absolute bottom-40 left-10 w-96 h-96 bg-[#03366d]/10 rounded-full blur-3xl"
+        />
+
+        {/* Geometric accents */}
+        <div className="absolute top-20 left-20 w-40 h-40 border border-[#03366d]/10 rounded-3xl rotate-12" />
+        <div className="absolute bottom-20 right-20 w-32 h-32 border border-[#D4AF37]/10 rounded-3xl -rotate-12" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -81,12 +106,12 @@ export default function AboutSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group text-center"
+                  className="group text-center p-6 rounded-2xl bg-white/50 backdrop-blur-sm border border-gray-100 hover:border-[#03366d]/20 hover:shadow-xl transition-all duration-300"
                 >
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     className="w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center shadow-lg"
-                    style={{ backgroundColor: `${value.color}10` }}
+                    style={{ backgroundColor: `${value.color}15` }}
                   >
                     <Icon size={36} style={{ color: value.color }} />
                   </motion.div>
@@ -108,9 +133,13 @@ export default function AboutSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-gradient-to-r from-[#03366d] to-[#024a8a] rounded-3xl p-8 md:p-12 shadow-2xl"
+          className="relative bg-gradient-to-r from-[#03366d] via-[#024a8a] to-[#03366d] rounded-3xl p-8 md:p-12 shadow-2xl overflow-hidden"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+          {/* Decorative elements inside stats bar */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#D4AF37]/10 rounded-full translate-y-1/2 -translate-x-1/2" />
+
+          <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
             <div>
               <div className="text-4xl md:text-5xl font-bold text-[#D4AF37] mb-2">3</div>
               <div className="text-sm md:text-base opacity-80">Divisions</div>

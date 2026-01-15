@@ -13,7 +13,7 @@ interface DivisionCardProps {
   cta: string;
   href: string;
   logoPath: string;
-  bannerPlaceholder: string;
+  bannerPath: string;
   comingSoon?: string;
   delay?: number;
 }
@@ -26,7 +26,7 @@ export default function DivisionCard({
   cta,
   href,
   logoPath,
-  bannerPlaceholder,
+  bannerPath,
   comingSoon,
   delay = 0,
 }: DivisionCardProps) {
@@ -40,21 +40,15 @@ export default function DivisionCard({
       transition={{ duration: 0.6, delay }}
       className="card-hover relative bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100"
     >
-      {/* Banner Image Placeholder */}
-      <div className="banner-container relative bg-gradient-to-br from-[#03366d] to-[#024a8a]">
-        {/* Decorative elements */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-4 left-4 w-32 h-32 bg-white rounded-full blur-3xl" />
-          <div className="absolute bottom-4 right-4 w-24 h-24 bg-[#D4AF37] rounded-full blur-2xl" />
-        </div>
-
-        {/* Banner placeholder text - tells user the dimensions */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-white/80">
-          <div className="bg-white/20 backdrop-blur-sm rounded-xl px-4 py-2 mb-2">
-            <p className="text-sm font-medium">Banner Image</p>
-          </div>
-          <p className="text-xs opacity-70">{bannerPlaceholder}</p>
-        </div>
+      {/* Banner Image */}
+      <div className="banner-container relative">
+        <Image
+          src={bannerPath}
+          alt={`${name} banner`}
+          fill
+          className="object-cover"
+          priority
+        />
 
         {/* Coming Soon Badge */}
         {isComingSoon && (

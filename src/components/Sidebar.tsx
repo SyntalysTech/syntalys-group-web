@@ -53,41 +53,21 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
 
   const sidebarContent = (isMobile: boolean = false) => (
     <>
-      {/* Logo Section */}
-      <div className="p-6 border-b border-gray-100">
-        <div className="flex items-center gap-3">
-          <motion.div
-            className="relative w-12 h-12 flex-shrink-0"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: 'spring', stiffness: 300 }}
-          >
-            <Image
-              src="/logos/syntalys-group/logo-horizontal.png"
-              alt="SYNTALYS GROUP"
-              fill
-              className="object-contain"
-              priority
-            />
-          </motion.div>
-          <AnimatePresence mode="wait">
-            {(!isCollapsed || isMobile) && (
-              <motion.div
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -10 }}
-                transition={{ duration: 0.2 }}
-                className="overflow-hidden"
-              >
-                <h1 className="font-bold text-[#03366d] text-lg leading-tight whitespace-nowrap">
-                  {t.sidebar.title}
-                </h1>
-                <p className="text-xs text-[#D4AF37] font-medium whitespace-nowrap">
-                  {t.sidebar.subtitle}
-                </p>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
+      {/* Logo Section - Solo logo, sin texto */}
+      <div className="p-6 border-b border-gray-100 flex justify-center">
+        <motion.div
+          className={`relative flex-shrink-0 ${isCollapsed && !isMobile ? 'w-12 h-12' : 'w-40 h-14'}`}
+          whileHover={{ scale: 1.05 }}
+          transition={{ type: 'spring', stiffness: 300 }}
+        >
+          <Image
+            src="/logos/syntalys-group/logo-horizontal.png"
+            alt="SYNTALYS GROUP"
+            fill
+            className="object-contain"
+            priority
+          />
+        </motion.div>
       </div>
 
       {/* Navigation */}
@@ -208,7 +188,7 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
         <div className="p-4 border-t border-gray-100">
           <motion.button
             onClick={() => setIsCollapsed(!isCollapsed)}
-            className={`w-full flex items-center gap-2 px-4 py-3 rounded-xl text-gray-400 hover:bg-gray-50 hover:text-[#03366d] transition-all duration-300 ${isCollapsed ? 'justify-center' : 'justify-center'}`}
+            className={`w-full flex items-center gap-2 px-4 py-3 rounded-xl text-gray-400 hover:bg-gray-50 hover:text-[#03366d] transition-all duration-300 justify-center`}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             title={isCollapsed ? t.sidebar.expand : t.sidebar.collapse}
@@ -240,26 +220,16 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
 
   return (
     <>
-      {/* Mobile Header */}
+      {/* Mobile Header - Solo logo */}
       <div className="lg:hidden fixed top-0 left-0 right-0 h-16 bg-white/95 backdrop-blur-lg border-b border-gray-100 z-40 flex items-center justify-between px-4">
-        <div className="flex items-center gap-3">
-          <div className="relative w-10 h-10">
-            <Image
-              src="/logos/syntalys-group/logo-horizontal.png"
-              alt="SYNTALYS GROUP"
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
-          <div>
-            <h1 className="font-bold text-[#03366d] text-sm leading-tight">
-              SYNTALYS GROUP
-            </h1>
-            <p className="text-xs text-[#D4AF37] font-medium">
-              {t.sidebar.subtitle}
-            </p>
-          </div>
+        <div className="relative w-32 h-10">
+          <Image
+            src="/logos/syntalys-group/logo-horizontal.png"
+            alt="SYNTALYS GROUP"
+            fill
+            className="object-contain"
+            priority
+          />
         </div>
         <motion.button
           onClick={() => setIsMobileOpen(!isMobileOpen)}

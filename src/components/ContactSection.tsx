@@ -9,25 +9,39 @@ export default function ContactSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="contact" className="py-24 bg-gray-50 relative overflow-hidden">
-      {/* Background decoration */}
+    <section id="contact" className="py-24 relative overflow-hidden">
+      {/* Background with rich gradient */}
       <div className="absolute inset-0 pointer-events-none">
+        {/* Multi-layer gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#03366d]/8 via-[#f1f5f9] to-[#D4AF37]/8" />
+
+        {/* Animated orbs */}
         <motion.div
           animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.05, 0.1, 0.05],
+            scale: [1, 1.3, 1],
+            opacity: [0.15, 0.25, 0.15],
+            x: [0, 20, 0],
           }}
           transition={{ duration: 10, repeat: Infinity }}
-          className="absolute -top-40 -right-40 w-96 h-96 bg-[#03366d] rounded-full blur-3xl"
+          className="absolute -top-20 -right-20 w-[500px] h-[500px] bg-gradient-to-br from-[#03366d]/20 to-[#03366d]/5 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
             scale: [1.2, 1, 1.2],
-            opacity: [0.05, 0.1, 0.05],
+            opacity: [0.15, 0.25, 0.15],
+            x: [0, -20, 0],
           }}
-          transition={{ duration: 12, repeat: Infinity }}
-          className="absolute -bottom-40 -left-40 w-96 h-96 bg-[#D4AF37] rounded-full blur-3xl"
+          transition={{ duration: 12, repeat: Infinity, delay: 2 }}
+          className="absolute -bottom-20 -left-20 w-[400px] h-[400px] bg-gradient-to-tr from-[#D4AF37]/25 to-[#D4AF37]/5 rounded-full blur-3xl"
         />
+
+        {/* Accent lines */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#03366d]/20 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/20 to-transparent" />
+
+        {/* Corner decorations */}
+        <div className="absolute top-10 left-10 w-20 h-20 border-l-2 border-t-2 border-[#03366d]/10 rounded-tl-3xl" />
+        <div className="absolute bottom-10 right-10 w-20 h-20 border-r-2 border-b-2 border-[#D4AF37]/10 rounded-br-3xl" />
       </div>
 
       <div className="max-w-4xl mx-auto px-6 relative z-10">
@@ -56,11 +70,11 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl hover:border-[#03366d]/20 transition-all duration-300"
+            className="group bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl hover:border-[#03366d]/20 transition-all duration-300"
             whileHover={{ y: -4 }}
           >
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 rounded-xl bg-[#03366d]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#03366d] transition-colors">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#03366d]/10 to-[#03366d]/5 flex items-center justify-center flex-shrink-0 group-hover:from-[#03366d] group-hover:to-[#024a8a] transition-all duration-300">
                 <Mail className="text-[#03366d] group-hover:text-white transition-colors" size={24} />
               </div>
               <div>
@@ -79,10 +93,10 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
+            className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-100"
           >
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center flex-shrink-0">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#D4AF37]/15 to-[#D4AF37]/5 flex items-center justify-center flex-shrink-0">
                 <MapPin className="text-[#D4AF37]" size={24} />
               </div>
               <div>
@@ -107,7 +121,7 @@ export default function ContactSection() {
               href="https://syntalys.ch"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-white rounded-xl text-[#03366d] font-medium shadow-md hover:shadow-lg hover:bg-[#03366d] hover:text-white transition-all duration-300"
+              className="px-6 py-3 bg-white/80 backdrop-blur-sm rounded-xl text-[#03366d] font-medium shadow-md border border-gray-100 hover:shadow-lg hover:bg-[#03366d] hover:text-white hover:border-[#03366d] transition-all duration-300"
             >
               SYNTALYS TECH
             </a>
@@ -115,11 +129,11 @@ export default function ContactSection() {
               href="https://sports.syntalys.ch"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-white rounded-xl text-[#03366d] font-medium shadow-md hover:shadow-lg hover:bg-[#03366d] hover:text-white transition-all duration-300"
+              className="px-6 py-3 bg-white/80 backdrop-blur-sm rounded-xl text-[#03366d] font-medium shadow-md border border-gray-100 hover:shadow-lg hover:bg-[#03366d] hover:text-white hover:border-[#03366d] transition-all duration-300"
             >
               SYNTALYS SPORTS
             </a>
-            <span className="px-6 py-3 bg-gray-100 rounded-xl text-gray-400 font-medium cursor-not-allowed">
+            <span className="px-6 py-3 bg-gray-50 rounded-xl text-gray-400 font-medium cursor-not-allowed border border-gray-100">
               SYNTALYS INMO
             </span>
           </div>

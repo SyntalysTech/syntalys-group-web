@@ -15,58 +15,76 @@ export default function HeroSection({ onExplore }: HeroSectionProps) {
 
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-      {/* Background decorations */}
+      {/* Background with gradient mesh */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Main gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-50" />
+        {/* Base gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#03366d]/5 via-white to-[#D4AF37]/5" />
 
-        {/* Decorative shapes */}
+        {/* Animated gradient orbs */}
+        <motion.div
+          animate={{
+            scale: [1, 1.3, 1],
+            opacity: [0.15, 0.25, 0.15],
+            x: [0, 30, 0],
+            y: [0, -20, 0],
+          }}
+          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute top-10 right-10 w-[500px] h-[500px] bg-gradient-to-br from-[#03366d] to-[#024a8a] rounded-full blur-3xl"
+        />
+        <motion.div
+          animate={{
+            scale: [1.2, 1, 1.2],
+            opacity: [0.2, 0.3, 0.2],
+            x: [0, -20, 0],
+            y: [0, 30, 0],
+          }}
+          transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+          className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-gradient-to-tr from-[#D4AF37] to-[#e8c84a] rounded-full blur-3xl"
+        />
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.1, 0.15, 0.1],
           }}
-          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute top-20 right-20 w-96 h-96 bg-[#03366d] rounded-full blur-3xl"
-        />
-        <motion.div
-          animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.1, 0.2, 0.1],
-          }}
-          transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-          className="absolute bottom-20 left-20 w-80 h-80 bg-[#D4AF37] rounded-full blur-3xl"
-        />
-        <motion.div
-          animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.05, 0.1, 0.05],
-          }}
           transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#03366d] rounded-full blur-3xl"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-r from-[#03366d]/30 to-[#D4AF37]/30 rounded-full blur-3xl"
         />
 
-        {/* Grid pattern */}
+        {/* Geometric pattern overlay */}
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: `
+              radial-gradient(circle at 25% 25%, #03366d 2px, transparent 2px),
+              radial-gradient(circle at 75% 75%, #D4AF37 2px, transparent 2px)
+            `,
+            backgroundSize: '60px 60px',
+          }}
+        />
+
+        {/* Diagonal lines */}
         <div
           className="absolute inset-0 opacity-[0.02]"
           style={{
-            backgroundImage: `
-              linear-gradient(#03366d 1px, transparent 1px),
-              linear-gradient(90deg, #03366d 1px, transparent 1px)
-            `,
-            backgroundSize: '60px 60px',
+            backgroundImage: `repeating-linear-gradient(
+              45deg,
+              #03366d,
+              #03366d 1px,
+              transparent 1px,
+              transparent 40px
+            )`,
           }}
         />
       </div>
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        {/* Logo */}
+        {/* Logo with glow */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="relative w-32 h-32 mx-auto mb-8"
+          className="relative w-36 h-36 mx-auto mb-8"
         >
           <Image
             src="/logos/syntalys-group/logo-horizontal.png"
@@ -75,8 +93,9 @@ export default function HeroSection({ onExplore }: HeroSectionProps) {
             className="object-contain"
             priority
           />
-          {/* Glow effect */}
-          <div className="absolute inset-0 bg-[#D4AF37]/20 rounded-full blur-xl animate-pulse" />
+          {/* Multi-layer glow */}
+          <div className="absolute inset-0 bg-[#D4AF37]/30 rounded-full blur-2xl animate-pulse" />
+          <div className="absolute inset-4 bg-[#03366d]/20 rounded-full blur-xl" />
         </motion.div>
 
         {/* Title */}
@@ -107,7 +126,7 @@ export default function HeroSection({ onExplore }: HeroSectionProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           onClick={onExplore}
-          className="inline-flex items-center gap-3 px-8 py-4 bg-[#03366d] text-white font-semibold rounded-2xl shadow-lg shadow-[#03366d]/30 hover:shadow-xl hover:shadow-[#03366d]/40 transition-all duration-300 group"
+          className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#03366d] to-[#024a8a] text-white font-semibold rounded-2xl shadow-lg shadow-[#03366d]/30 hover:shadow-xl hover:shadow-[#03366d]/40 transition-all duration-300 group"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
