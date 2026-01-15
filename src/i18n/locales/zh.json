@@ -1,0 +1,98 @@
+{
+  "sidebar": {
+    "title": "SYNTALYS GROUP",
+    "subtitle": "瑞士卓越",
+    "home": "首页",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "language": "语言",
+    "collapse": "折叠菜单",
+    "expand": "展开菜单"
+  },
+  "hero": {
+    "title": "一个集团。",
+    "titleHighlight": "多元视野。",
+    "subtitle": "SYNTALYS GROUP将技术创新、体育卓越和房地产解决方案整合在一家瑞士控股公司旗下。",
+    "explore": "探索我们的部门"
+  },
+  "divisions": {
+    "title": "我们的部门",
+    "subtitle": "三大卓越支柱，服务您的雄心壮志"
+  },
+  "tech": {
+    "name": "SYNTALYS TECH",
+    "tagline": "技术与创新",
+    "description": "定制AI解决方案、软件开发和网络安全。我们为全球企业将数字复杂性转化为竞争优势。",
+    "services": [
+      "人工智能与机器学习",
+      "定制软件开发",
+      "网络安全与数据保护",
+      "数字化转型咨询"
+    ],
+    "cta": "访问 SYNTALYS TECH"
+  },
+  "sports": {
+    "name": "SYNTALYS SPORTS",
+    "tagline": "体育与表现",
+    "description": "为运动员和体育组织提供创新解决方案。从性能分析到完整的体育管理平台。",
+    "services": [
+      "性能分析与追踪",
+      "体育管理平台",
+      "运动员数据解决方案",
+      "体育科技创新"
+    ],
+    "cta": "访问 SYNTALYS SPORTS"
+  },
+  "inmo": {
+    "name": "SYNTALYS INMO",
+    "tagline": "房地产",
+    "comingSoon": "即将推出",
+    "description": "高端房地产解决方案和物业管理服务。将技术与专业知识相结合，实现卓越成果。",
+    "services": [
+      "物业管理",
+      "房地产投资",
+      "PropTech解决方案",
+      "资产管理"
+    ],
+    "cta": "即将推出"
+  },
+  "about": {
+    "title": "关于 SYNTALYS GROUP",
+    "subtitle": "瑞士控股公司总部位于瑞士，SYNTALYS GROUP统一了技术、体育和房地产领域的专业知识。",
+    "values": {
+      "title": "我们的价值观",
+      "excellence": {
+        "title": "卓越",
+        "description": "在我们所做的一切中体现瑞士精准和质量"
+      },
+      "innovation": {
+        "title": "创新",
+        "description": "塑造未来的开创性解决方案"
+      },
+      "integrity": {
+        "title": "诚信",
+        "description": "所有关系中的透明和信任"
+      },
+      "impact": {
+        "title": "影响力",
+        "description": "为合作伙伴创造可衡量的价值"
+      }
+    }
+  },
+  "footer": {
+    "description": "瑞士控股公司，汇聚技术创新、体育卓越和房地产解决方案。",
+    "rights": "版权所有。",
+    "divisions": "部门",
+    "legal": "法律",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "imprint": "法律声明"
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "准备好与 SYNTALYS GROUP 探索机会了吗？",
+    "email": "电子邮件",
+    "location": "位置",
+    "locationValue": "瑞士"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "sidebar": {
+    "title": "SYNTALYS GROUP",
+    "subtitle": "Excellence Suisse",
+    "home": "Accueil",
+    "about": "À propos",
+    "contact": "Contact",
+    "language": "Langue",
+    "collapse": "Réduire le menu",
+    "expand": "Développer le menu"
+  },
+  "hero": {
+    "title": "Un Groupe.",
+    "titleHighlight": "Multiples Horizons.",
+    "subtitle": "SYNTALYS GROUP réunit l'innovation technologique, l'excellence sportive et les solutions immobilières au sein d'une holding suisse.",
+    "explore": "Explorer Nos Divisions"
+  },
+  "divisions": {
+    "title": "Nos Divisions",
+    "subtitle": "Trois piliers d'excellence au service de vos ambitions"
+  },
+  "tech": {
+    "name": "SYNTALYS TECH",
+    "tagline": "Technologie & Innovation",
+    "description": "Solutions IA sur mesure, développement logiciel et cybersécurité. Nous transformons la complexité numérique en avantage compétitif pour les entreprises du monde entier.",
+    "services": [
+      "Intelligence Artificielle & Machine Learning",
+      "Développement Logiciel Sur Mesure",
+      "Cybersécurité & Protection des Données",
+      "Conseil en Transformation Digitale"
+    ],
+    "cta": "Visiter SYNTALYS TECH"
+  },
+  "sports": {
+    "name": "SYNTALYS SPORTS",
+    "tagline": "Sports & Performance",
+    "description": "Solutions innovantes pour les athlètes et organisations sportives. De l'analyse de performance aux plateformes de gestion sportive complètes.",
+    "services": [
+      "Analyse & Suivi de Performance",
+      "Plateformes de Gestion Sportive",
+      "Solutions de Données Athlètes",
+      "Innovation SportTech"
+    ],
+    "cta": "Visiter SYNTALYS SPORTS"
+  },
+  "inmo": {
+    "name": "SYNTALYS INMO",
+    "tagline": "Immobilier",
+    "comingSoon": "Prochainement",
+    "description": "Solutions immobilières premium et services de gestion de propriétés. Alliant technologie et expertise pour des résultats exceptionnels.",
+    "services": [
+      "Gestion de Propriétés",
+      "Investissement Immobilier",
+      "Solutions PropTech",
+      "Gestion d'Actifs"
+    ],
+    "cta": "Prochainement"
+  },
+  "about": {
+    "title": "À propos de SYNTALYS GROUP",
+    "subtitle": "Holding suisse basée en Suisse, SYNTALYS GROUP unifie l'expertise dans les secteurs de la technologie, du sport et de l'immobilier.",
+    "values": {
+      "title": "Nos Valeurs",
+      "excellence": {
+        "title": "Excellence",
+        "description": "Précision et qualité suisse dans tout ce que nous faisons"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Solutions pionnières qui façonnent l'avenir"
+      },
+      "integrity": {
+        "title": "Intégrité",
+        "description": "Transparence et confiance dans toutes les relations"
+      },
+      "impact": {
+        "title": "Impact",
+        "description": "Créer une valeur mesurable pour nos partenaires"
+      }
+    }
+  },
+  "footer": {
+    "description": "Holding suisse réunissant innovation technologique, excellence sportive et solutions immobilières.",
+    "rights": "Tous droits réservés.",
+    "divisions": "Divisions",
+    "legal": "Légal",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Conditions d'Utilisation",
+    "imprint": "Mentions Légales"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Prêt à explorer les opportunités avec SYNTALYS GROUP ?",
+    "email": "Email",
+    "location": "Localisation",
+    "locationValue": "Suisse"
+  }
+}
