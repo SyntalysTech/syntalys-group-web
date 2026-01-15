@@ -9,11 +9,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "SYNTALYS GROUP | Swiss Excellence in Technology, Sports & Real Estate",
-  description: "SYNTALYS GROUP SA - Swiss holding company bringing together technological innovation (SYNTALYS TECH), sports excellence (SYNTALYS SPORTS), and real estate solutions (SYNTALYS INMO).",
+  title: "SYNTALYS GROUP | Technology, Sports & Real Estate",
+  description: "SYNTALYS GROUP SA - Holding company bringing together technological innovation (SYNTALYS TECH), sports excellence (SYNTALYS SPORTS), and real estate solutions (SYNTALYS INMO).",
   keywords: [
     "SYNTALYS GROUP",
-    "Swiss holding company",
+    "holding company",
     "SYNTALYS TECH",
     "SYNTALYS SPORTS",
     "SYNTALYS INMO",
@@ -32,22 +32,22 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://syntalysgroup.com",
     siteName: "SYNTALYS GROUP",
-    title: "SYNTALYS GROUP | Swiss Excellence",
-    description: "Swiss holding company - Technology, Sports & Real Estate divisions",
+    title: "SYNTALYS GROUP",
+    description: "Technology, Sports & Real Estate",
     images: [
       {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
+        url: "/images/icons/syntalys_group.png",
+        width: 512,
+        height: 512,
         alt: "SYNTALYS GROUP",
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "SYNTALYS GROUP | Swiss Excellence",
-    description: "Swiss holding company - Technology, Sports & Real Estate divisions",
-    images: ["/og-image.png"],
+    card: "summary",
+    title: "SYNTALYS GROUP",
+    description: "Technology, Sports & Real Estate",
+    images: ["/images/icons/syntalys_group.png"],
   },
   robots: {
     index: true,
